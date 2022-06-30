@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Body from './components/Body';
+import MainHeader from './components/MainHeader';
 
 function App() {
   return (
     <div className="App">
-       <h1>This is a page from me. Billig page!</h1>
+       <MainHeader />
+       <Routes>
+         <Route path="/" element={<Body />}></Route>
+       </Routes>
     </div>
   );
 }
